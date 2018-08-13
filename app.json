@@ -1,0 +1,15 @@
+{
+  "name": "AwamiCrockery",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
