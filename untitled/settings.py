@@ -25,7 +25,7 @@ SECRET_KEY = '7$r$4@a2!7u8rq7nd1_2cliujcse6=_2@h5mpr=a20-ah@+3^k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://awamicrockery.herokuapp.com/','*']
 
 
 # Application definition
