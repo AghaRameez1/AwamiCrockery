@@ -2,36 +2,14 @@
 <script src="{% static "js/jquery-3.2.1.js" %}"></script>
 <script src="{% static "js/awamicrockery.js" %}"></script>
 <script src="{% static "js/network.js" %}"></script>
-<button class="add">Press me to add</button>
+<button class="add">add</button>
 <button>delete</button>
 <button>search</button>
 <button>clear</button>
-<div class="addition" style="display: block">
-<form name = "form" method = "POST" class="data-entry">
-{%csrf_token %}
-<div style=" padding-bottom: 10px;
-    margin-top: 10px;"> First Name:{{ form.first_name }}</div>
-        {% if form.first_name.errors %}
-        <span class="help">{{ form.first_name.errors|striptags }}</span>
-        {% endif %}
-<div style=" padding-bottom: 10px;
-    margin-top: 10px;">Last Name:{{ form.last_name }}</div>
-        {% if form.last_name.errors %}
-        <span class="help">{{ form.last_name.errors|striptags }}</span>
-        {% endif %}
-<div style=" padding-bottom: 10px;
-    margin-top: 10px;">Price:{{ form.price }}</div>
-        {% if form.price.errors %}
-        <span class="help">{{ form.price.errors|striptags }}</span>
-        {% endif %}
-<div style=" padding-bottom: 10px;
-    margin-top: 10px;">Item Code:{{ form.item_code }}</div>
-        {% if form.item_code.errors %}
-        <span class="help">{{ form.item_code.errors|striptags }}</span>
-        {% endif %}
-<button type="submit">add</button>
-</form>
+<div class="addition" style="display: none">
+{% include 'awamicrockery/_partial/_add.html' %}
 </div>
+{% include 'awamicrockery/_partial/_search.html' %}
 {% for c in model %}
 {{ c.first_name }}--{{ c.last_name }}--{{ c.price }}--{{ c.item_code }}
 {% endfor %}

@@ -1,0 +1,7 @@
+<form method="GET" action="{% url 'searchmodel' %}">
+        <input type="text" id="vendor_search"
+               placeholder="Search here vendors..." name="q" value="{{ request.GET.q }}"/>
+    <input type="submit" class="search" value="Search"/>
+</form>
+<a href="/">back</a>
+{{ vendorlist }}

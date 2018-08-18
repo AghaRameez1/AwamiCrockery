@@ -11,21 +11,21 @@ class vendorForm(ModelForm):
 
     def __init__(self,*args,**kwargs):
         super(vendorForm,self).__init__(*args,**kwargs)
-        self.fields['first_name'].required= True
+        # self.fields['first_name'].required= True
         self.fields['first_name'].widget.attrs['placeholder']="First Name"
         self.fields['first_name'].widget.attrs['class']="form-control"
         self.fields['first_name'].widget.attrs['style']="height: 29px"
 
-        self.fields['last_name'].required= True
+        # self.fields['last_name'].required= True
         self.fields['last_name'].widget.attrs['placeholder']="Last Name"
         self.fields['last_name'].widget.attrs['class']="form-control"
         self.fields['last_name'].widget.attrs['style'] = "height: 29px"
 
         self.fields['price'].required= True
-        self.fields['price'].widget.attrs['placeholder'] = "Price In Rupees"
-        self.fields['price'].widget.attrs['class'] = "form-control"
+        # self.fields['price'].widget.attrs['placeholder'] = "Price In Rupees"
+        # self.fields['price'].widget.attrs['class'] = "form-control"
 
-        self.fields['item_code'].required= True
+        # self.fields['item_code'].required= True
         self.fields['item_code'].widget.attrs['placeholder']="Item Code"
         # self.fields['item_code'].widget.attrs['class']="form-control"
 
@@ -41,5 +41,7 @@ class vendorForm(ModelForm):
 
     def clean_price(self):
         price = self.cleaned_data['price']
-        numeric_validator(price)
+        # print type(price)
+        # numeric_validator(price)
+        # print price
         return price

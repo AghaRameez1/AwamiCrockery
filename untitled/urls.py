@@ -21,4 +21,5 @@ from Test1.views import vendorview
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', vendorview.vendorFormView.as_view()),
+    url(r'^search/', vendorview.searchView.as_view(), name='searchmodel'),
 ]
