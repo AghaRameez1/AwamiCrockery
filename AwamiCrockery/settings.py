@@ -11,9 +11,8 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-# import dj_database_url
+import dj_database_url
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -25,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '7$r$4@a2!7u8rq7nd1_2cliujcse6=_2@h5mpr=a20-ah@+3^k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['.herokuapp.com']
 
@@ -50,7 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # 'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'AwamiCrockery.urls'
@@ -122,25 +121,20 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+#
 # # Static files (CSS, JavaScript, Images)
 # # https://docs.djangoproject.com/en/1.11/howto/static-files/
-PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__)) + '/..'
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))+'/..'
 # STATIC_URL = '/static/'
 # STATICFILES_DIRS = (
 #     os.path.join('static'),
 #     os.path.join(PROJECT_ROOT, 'static'),
 # )
 
-# PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-#
-# # Static files (CSS, JavaScript, Images)
-# # https://docs.djangoproject.com/en/1.9/howto/static-files/
-if not DEBUG:
-    STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
-STATIC_URL = '/static/'
-
-# Extra places for collectstatic to find static files.
+# if not DEBUG:
+#     STATIC_ROOT = os.path.join('static')
+STATIC_ROOT = os.path.join('static')
+STATIC_URL = "/static/"
 STATICFILES_DIRS = (
     os.path.join('static'),
     os.path.join(PROJECT_ROOT, 'static'),
