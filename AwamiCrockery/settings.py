@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-import dj_database_url
+# import dj_database_url
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -80,8 +80,12 @@ WSGI_APPLICATION = 'AwamiCrockery.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'default': dj_database_url.config(default=dj_database_url.config('DATABASE_URL'))
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dab1c5ueadanqe',
+        'USER': 'sybnzlqzgfqafg',
+        'PASSWORD': '6639b395444f5c42aca1f59188be4f0f76df856c0022648b2e3f7ad63192a0a3',
+        'HOST': 'ec2-54-163-246-5.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
