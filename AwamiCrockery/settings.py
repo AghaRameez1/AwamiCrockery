@@ -146,5 +146,5 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-if not DEBUG:
-    from AwamiCrockery.local_settings import *
+# if not DEBUG:
+#     from AwamiCrockery.local_settings import *
