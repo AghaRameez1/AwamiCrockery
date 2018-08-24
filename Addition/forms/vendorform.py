@@ -1,7 +1,7 @@
 from django.forms import ModelForm
 
-from Test1.models import vendorModel
-from Test1.validator import ascii_validator, numeric_validator
+from Addition.models import vendorModel
+from Addition.validator import ascii_validator, numeric_validator
 
 
 class vendorForm(ModelForm):

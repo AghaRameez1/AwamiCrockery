@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
-from Test1.views import vendorview
+from Addition.views import vendorview
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),

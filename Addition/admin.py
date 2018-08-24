@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.contrib import admin
-from Test1.models import vendorModel
+from Addition.models import vendorModel
 
 # Register your models here.
 

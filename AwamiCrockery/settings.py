@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Test1',
+    'Addition',
 ]
 
 MIDDLEWARE = [
@@ -146,5 +146,5 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-# if not DEBUG:
-#     from AwamiCrockery.local_settings import *
+if not DEBUG:
+    from AwamiCrockery.local_settings import *

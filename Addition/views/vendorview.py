@@ -5,8 +5,8 @@ from django.utils.decorators import method_decorator
 from django.views import View
 from django.views.decorators.csrf import csrf_exempt
 
-from Test1.forms.vendorform import vendorForm
-from Test1.models import vendorModel
+from Addition.forms.vendorform import vendorForm
+from Addition.models import vendorModel
 
 
 class vendorFormView(View):
