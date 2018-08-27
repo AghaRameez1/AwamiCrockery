@@ -130,7 +130,7 @@ PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__)) +'/..'
 
 # if not DEBUG:
 #     STATIC_ROOT = os.path.join('static')
-# STATIC_ROOT = 'AwamiCrockery'
+STATIC_ROOT = ''
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join('static'),
