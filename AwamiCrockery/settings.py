@@ -16,7 +16,6 @@ import dj_database_url
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
@@ -72,7 +71,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'AwamiCrockery.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
@@ -88,7 +86,6 @@ DATABASES = {
 }
 
 DATABASES['default'].update(dj_database_url.config())
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -108,7 +105,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
@@ -125,7 +121,7 @@ USE_TZ = True
 #
 # # Static files (CSS, JavaScript, Images)
 # # https://docs.djangoproject.com/en/1.11/howto/static-files/
-PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))+'/..'
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__)) + '/..'
 # STATIC_URL = '/static/'
 # STATICFILES_DIRS = (
 #     os.path.join('static'),
@@ -135,8 +131,11 @@ PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))+'/..'
 # if not DEBUG:
 #     STATIC_ROOT = os.path.join('static')
 # STATIC_ROOT = os.path.join(PROJECT_ROOT,'static')
-STATIC_URL =""
-STATICFILES_DIRS = (os.path.join('static'))
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join('static'),
+    os.path.join(PROJECT_ROOT, 'static'),
+)
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
