@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'AwamiCrockery.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'awamicrockery',
-        'USER': 'awamicrockery',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
+        'NAME': 'dab1c5ueadanqe',
+        'USER': 'sybnzlqzgfqafg',
+        'PASSWORD': '6639b395444f5c42aca1f59188be4f0f76df856c0022648b2e3f7ad63192a0a3',
+        'HOST': 'ec2-54-163-246-5.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
@@ -121,7 +121,7 @@ USE_TZ = True
 #
 # # Static files (CSS, JavaScript, Images)
 # # https://docs.djangoproject.com/en/1.11/howto/static-files/
-PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__)) + '/..'
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 # STATIC_URL = '/static/'
 # STATICFILES_DIRS = (
 #     os.path.join('static'),
@@ -130,7 +130,7 @@ PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__)) + '/..'
 
 # if not DEBUG:
 #     STATIC_ROOT = os.path.join('static')
-# STATIC_ROOT = os.path.join(PROJECT_ROOT,'static')
+STATIC_ROOT = os.path.join(PROJECT_ROOT,'static')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join('static'),
