@@ -136,11 +136,11 @@ PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))+'/..'
 #     STATIC_ROOT = os.path.join('static')
 # STATIC_ROOT = os.path.join(PROJECT_ROOT,'static')
 STATIC_URL =""
-# STATICFILES_DIRS = ""
-# STATICFILES_FINDERS = (
-#     'django.contrib.staticfiles.finders.FileSystemFinder',
-#     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-# )
+STATICFILES_DIRS = ""
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+)
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # if not DEBUG:
 #     from AwamiCrockery.local_settings import *
