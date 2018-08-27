@@ -134,8 +134,8 @@ PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))+'/..'
 
 # if not DEBUG:
 #     STATIC_ROOT = os.path.join('static')
-STATIC_ROOT = os.path.join('static')
-STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(PROJECT_ROOT,'static')
+STATIC_URL = os.path.join(PROJECT_ROOT,'static')
 STATICFILES_DIRS = (
     os.path.join('static'),
     os.path.join(PROJECT_ROOT, 'static'),
